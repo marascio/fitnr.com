@@ -1,9 +1,41 @@
 body, html {
-    background: #fafafa;
-    margin: 5px;
+    background: #fff;
+    margin: 0;
     padding: 0;
 }
 
+@font-face {
+    font-family: 'Mono Social Icons Font';
+    src: url('/MonoSocialIconsFont-1.10.eot');
+    src: url('/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+         url('/MonoSocialIconsFont-1.10.woff') format('woff'),
+         url('/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+         url('/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+    src: url('/MonoSocialIconsFont-1.10.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.symbol, a.symbol:before {
+    font-family: 'Mono Social Icons Font';
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+a.symbol:before {
+    content: attr(title);
+    margin-right: 0.3em;
+    font-size: 130%;
+}
+                    
 a:link {
     text-decoration: none;
 }
@@ -20,64 +52,161 @@ a:active {
     text-decoration: underline;
 }
 
-#wrap {
-    width: 960px;
+.color-primary-0 { color: #7C8DB3 }
+.color-primary-1 { color: #C4CDDF }
+.color-primary-2 { color: #A0AECB }
+.color-primary-3 { color: #5D729E }
+.color-primary-4 { color: #42598A }
+
+#topbar {
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
+#topbar div.a {
+    /*background: #4063AD;*/
+    /*background: #5D729E;*/
+    background: #A1B6E2;
+    height: 3px;
+}
+
+#topbar div.b {
+    /*background: #85A1DC;*/
+    /*background: #A0AECB;*/
+    background: #CFDCF5;
+    height: 3px;
+}
+
+#topbar div.c {
+    /*background: #B5C8F0;*/
+    /*background: #C4CDDF;*/
+    background: #E5ECFB;
+    height: 3px;
+}
+
+#wrap {
+    width: 960px;
+    font-family: "Droid Serif", serif;
+    font-weight: 400;
+    margin: 5px;
+}
+
+
 #header {
-    font-family: "Cardo", serif;
-    border-bottom: 1px dotted #d3d3d3;
-    background: #fafafa;
     padding: 15px;
     padding-top: 20px;
+    border-bottom: 1px dotted #d3d3d3;
 }
 
 #header h1 {
-    font-size: 36px;
-    font-weight: bold;
+    font-family: "Racing Sans One", sans-serif;
+    text-shadow: 1px 1px 0px #C4CDDF;
+    color: #42598A;
+    font-weight: 400;
+    font-size: 48px;
+    letter-spacing: 2px;
     padding: 0px;
     margin: 0px;
 }
 
 #header h2 {
+    font-weight: 400;
     font-size: 18px;
-    font-style: italic;
-    font-weight: normal;
     padding: 0px;
     margin: 0px;
+    color: #686F7E;
+}
+
+#social {
+    padding: 15px;
+    padding-top: 76px;
+    position: absolute;
+    top: 5px;
+    left: 833px;
+}
+
+#social span.symbol {
+    font-size: 36px;
+    margin-left: 3px;
+}
+
+#social a:link {
+    text-decoration: none;
+    color: #42598A
+}
+
+a:visited {
+    text-decoration: none;
+    color: #42598A
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #42598A
+}
+
+a:active {
+    text-decoration: underline;
+    color: #42598A
 }
 
 #sidebar {
     font-family: "Droid Sans", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
     float: left;
     width: 240px;
-    background: #fafafa;
-    font-size: 12px;
     padding-left: 15px;
     padding-right: 15px;
     line-height: 100%;
 }
 
 #main {
-    font-family: "Cardo", serif;
     float: right;
     width: 649px;
-    background: #fafafa;
     padding-left: 15px;
     padding-right: 15px;
-    font-size: 17px;
+    font-size: 16px;
+    line-height: 170%;
     border-left: 1px dotted #d3d3d3;
     text-align: justify;
 }
 
+#main p em {
+    font-family: "Droid Sans", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    /*    background: #E9F0FF;*/
+    /*background: #FFF3DD;*/
+    /*color: #55458E;*/
+    background: #FFF6E6;
+    /*color: #817255;*/
+    color: #585143;
+}
+
+#main h1 {
+    font-family: "Droid Sans", sans-serif;
+    font-weight: 700;
+}
+
 #main h2 {
     font-family: "Droid Sans", sans-serif;
+    font-weight: 700;
+}
+
+#main h3 {
+    font-family: "Droid Sans", sans-serif;
+    font-weight: 700;
+}
+
+#main h4 {
+    font-family: "Droid Sans", sans-serif;
+    font-weight: 700;
 }
 
 #footer {
-    font-family: "Cardo", serif;
     clear: both;
-    background: #fafafa;
 }
 
 #sidebar aside ol {
