@@ -70,14 +70,14 @@ to take a seat next to the dodo, and rightly so. Presciently, the SEC study
 cautions future dwellers against using the findings as justification for change
 in the future:
 
-“While to date the Commission has found that these programs in aggregate do not
-appear to have had an adverse effect on either the executions received by
-customers whose orders are preferenced or the national market system as a
-whole, these findings should not be taken to mean that the Commission believes
-that such adverse effects may not arise in the future. Indeed, changed
-circumstances may result in a determination by the Commission that the findings
-it has made in this study require reconsideration.” (Emphasis mine)
-([Source](http://www.sec.gov/news/studies/prefrep.htm#pt6), final paragraph)
+> “While to date the Commission has found that these programs in aggregate do not
+> appear to have had an adverse effect on either the executions received by
+> customers whose orders are preferenced or the national market system as a
+> whole, these findings should not be taken to mean that the Commission believes
+> that such adverse effects may not arise in the future. Indeed, changed
+> circumstances may result in a determination by the Commission that the findings
+> it has made in this study require reconsideration.” (Emphasis mine.
+> [Source](http://www.sec.gov/news/studies/prefrep.htm#pt6), final paragraph)
 
 Circumstances have undoubtedly changed from when this report was published in
 1997.
