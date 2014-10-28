@@ -1,0 +1,118 @@
+---
+title: IEX, Broker Preferencing, and the Queue Jumpers
+date: 2014-09-09
+tags: market-structure
+---
+
+*This article [originally appeared online][1] at the [TABBForum][2] on
+September 9, 2014.*
+
+*IEX needs broker preferencing because of its business model – its non-broker
+owners provide no client flow, and many electronic market makers see little
+reason to be exposed to the high fee venue. But that doesn't make it right.*
+
+You’ve arrived at the theater quite early. The reviews have been great, so you
+anticipated a long line to get in, and your good planning has you in prime
+position for great seats. As you suffer the cold drizzle, a limousine pulls up
+and out steps a wealthy couple. Bemused, you watch as they are ushered straight
+to the front of the line and taken into the theater before you. Your mood sours
+quickly when you see an entire line of black town cars pulling in. Planning
+ahead and leaving work early for an evening at the movies was an entire waste
+of time.
+
+This is broker preferencing – or, as it should be called, queue jumping. It’s a
+terrible scenario for any trader taking on risk by posting passive orders to
+the market. If we’re not careful, it might just slip into the US equities
+markets under our nose.
+
+Unlike movie theaters, the US stock market has well-defined rules for knowing
+where you stand in the order queue. Whether it is a price/time or a price/size
+pro-rata scheme, you can directly observe your queue position. Under a broker
+preferencing regime, however, these rules are tossed aside, creating an
+environment of uncertainty because your effective queue position will be
+determined post-hoc based on counterparty. Knowing with certainty your true
+place in the order queue will become impossible.
+
+Chris Nagy of KOR Trading [recently wondered][3] what all the fuss was about (“What
+Does IEX’s Exchange Application Mean for Market Structure?”). After all, the
+SEC has permitted preferencing in the past, and it is the reality of the market
+in Canada. But that doesn't make it right; especially for the current state of
+US equities markets.
+
+In fact, I wonder why we are even discussing broker preferencing. The issue
+would be nowhere near the table of consideration if it weren’t for IEX and its
+desire to bring along the rule to its lit exchange. Make no mistake about it:
+IEX needs broker preferencing because of its business model. Its non-broker
+owners provide no client flow, and many electronic market makers see little
+reason to be exposed to the high fee venue.
+
+Providing brokers a fast path to the top of the queue via a free
+internalization service does nothing to improve the US equities markets
+overall, and it certainly does not promote fairness in our markets. It merely
+serves as one of the few levers that IEX can pull to attract order flow. For
+all practical purposes, this creates a hidden, backdoor payment for order flow
+system that is subsidized by passive traders at IEX, many of whom will have no
+idea as to why their orders keep getting jumped. Yet another complexity that so
+many have publicly vowed to eliminate.
+
+IEX is free to do what it wants as a dark pool. As a lit exchange, however, its
+business model needs are not sufficient reason to disrupt the accepted and
+well-understood workings of priority in the US stock market. Broker
+preferencing warrants careful study and debate before even being considered a
+candidate issue for market structure reform. It should not be thrust upon us
+simply because the market center du jour needs it to compete.
+
+The SEC studied preferencing in the mid-90s and found it largely OK; but this
+was before markets were dominated by displayed electronic liquidity with
+numerous highly competitive liquidity providers. It was the day of the
+specialist, and as the market evolved, it followed the specialist out the door
+to take a seat next to the dodo, and rightly so. Presciently, the SEC study
+cautions future dwellers against using the findings as justification for change
+in the future:
+
+“While to date the Commission has found that these programs in aggregate do not
+appear to have had an adverse effect on either the executions received by
+customers whose orders are preferenced or the national market system as a
+whole, these findings should not be taken to mean that the Commission believes
+that such adverse effects may not arise in the future. Indeed, changed
+circumstances may result in a determination by the Commission that the findings
+it has made in this study require reconsideration.” (Emphasis mine)
+([Source](http://www.sec.gov/news/studies/prefrep.htm#pt6), final paragraph)
+
+Circumstances have undoubtedly changed from when this report was published in
+1997.
+
+At best, preferencing is a wash that moves some amount of off-exchange
+internalization onto lit venues in exchange for a more complicated and unfair
+market place. It might also be very, very bad. Unanticipated harmful
+consequences may spur a new tidal wave of regulatory-induced complexity
+wreaking havoc for years to come.
+
+One such risk that greatly concerns me is broker concentration. Because
+preferencing permits queue jumping, there will be a benefit to concentrate
+order flow with the largest brokers. Small brokers will be placed at an
+inherent disadvantage that no amount of service or pricing can overcome. Their
+customer’s passive orders will be systematically disadvantaged by those coming
+from larger brokers able to side step the order book queue.
+
+Electronic market makers will have less incentive to post and maintain better
+prices because they know the reward for taking that risk will be subverted by
+large brokers. In time, as power is concentrated, one wonders what other
+perversions might be introduced as large brokers seek to protect their turf.
+Orders that only match if internalized? Rules to protect “official” market
+makers friendly to specific brokers? Consequences are largely unknown and
+certainly have not been discussed. As a point of reference, who would have
+thought the ban on locked markets would have caused the problems it has.
+
+Regulatory evolution is important but should only be done if the potential
+rewards outweigh the well-analyzed risks. Several reform areas – such as
+permitting locked markets, instituting trade-at, and fixing the SIP – deserve
+to receive the attention of the SEC much more so than the subversion of
+priority that is broker preferencing. The worst kinds of regulations are those
+done specifically to serve the aims of a small constituency, and in this case,
+broker preferencing does everything to help IEX and nothing for the overall
+marketplace.
+
+[1]: http://tabbforum.com/opinions/iex-broker-preferencing-and-the-queue-jumpers
+[2]: http://tabbforum.com
+[3]: http://tabbforum.com/opinions/what-does-iex%27s-exchange-application-mean-for-market-structure

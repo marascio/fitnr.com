@@ -1,0 +1,108 @@
+---
+title: It's Time to Distribute the SIP
+date: 2014-10-27
+tags: market-structure
+---
+
+**DRAFT**
+
+*By distributing the SIP to the exchanges the US equities market structure
+would become both more resilient to failure and achieve latency pairity with
+direct venue feeds. This change embraces the distributed nature of our
+marketplace and provides a distinct improvement upon the current scheme
+without impinging upon the exchange's ability to provide innovative direct
+data feed products.*
+
+The US equities market place is comprised of numerous competitive displayed
+and non-displayed liquidity centers. Each liquidity center that receives
+quotation protection is known as an exchange and is required to provide, in
+real-time, their quotations and trade activity to a centralized processor
+known as a SIP.
+
+Before we go any further let's make sure we're on the same page:
+
+1. SIP stands for Security Information Processor. It is a construct created
+   as part of the Regulation NMS reform tasked with providing a common and
+   consistent view of the national market by aggregating data from each of the
+   exchanges.
+
+2. There are two SIPs. One, run by the [Consolidated Tape Association][cta]
+   and administered by NYSE, handles securities listed on Tape A or Tape B.
+   Tape A securities are listed on the NYSE and Tape B, traditionally known as
+   the regionals, are listed on NYSE MKT (formerly known as the AMEX). The
+   second SIP handles Tape C securities and is run by the [UTP][utp] (Unlisted
+   Trading Privileges) Plan and administered by NASDAQ. As you might have
+   guessed, it handles stocks that are listed on the NASDAQ market.
+
+3. SIP market data feeds are broken down into two halves: trades and quotes.
+   The CTA feeds (Tape A/B) are known as the Consolidated Quotation System
+   (CQS) and the Consolidated Trade System (CTS). The UTP feeds (Tape C) are
+   known as the the UTP Quote Data Feed (UQDF) and the UTP Trades Data Feed
+   (UTDF).
+
+4. Market data specifications for each feed are largely the same. They have
+   the same scent, if you will, but they do differ enough as to require
+   distinct handling of each flavor (CTA vs UTP) independently.
+
+5. Hence forth, to avoid confusion and unnecessary plurality, I refer only to
+   the "SIP". I am specifically referring to the construct inclussive of both
+   administrative domains (CTA and UTP) and their two distinct types of
+   market data (quotes via CQS/UQDF and trades via CTS/UTDF).
+
+6. SIP market data falls into roughly three buckets: administrative,
+   regulatory, and market activity. Administrative messages are not sensitive
+   to real-time processing and include things like symbol spins. Real-time
+   regulatory messages distribute information such as circuit breaker and
+   volatility pause levels and are "somewhat" sensitive to real-time
+   processing. Market activity messages include top of book quotations for
+   each market center, a calculated national best bid and offer, and trade
+   notifications. Market activity messages are what you see every day on your
+   quote screens and are the most sensitive to real-time processing.
+
+The SIP is a centralized construct with both an input side and an output side.
+The input side is fed data via [TCP][tcp] and the output side distributed data
+via [Multicast UDP][multicast]. This centralized architecture has two
+intrinsic disadvantages:
+
+1. SIP market data will **always** be slower than direct feeds; and
+
+2. It as a single point of failure for the entire national market system.
+
+The first point is obvious once you consider physics. SIP data must traverse
+an additional "hop" before arriving at the end-user's system. SIP data will
+always be behind direct feed data. This in-built disadvantage is further
+compounded by neglect. SIP feeds represent competition for lucractive direct
+exchange feeds and both the hardware and specifications are highly non-optimal
+for speed. Efforts have been made to upgrade and improve the hardware, but in
+the end the architecture must change to truly fix the SIP latency delta.
+
+More troublesome, however, is the second point. The US equities market place
+is distributed yet a failure in the SIP can bring the entire system to a
+screeching halt. We saw this happen with Tape C when the UTP SIP failed bring
+trading in all NASDAQ listed stock to an end for the better part of a day.
+
+Finally, there is a third problem that arises from selective use of the SIP
+feeds by exchanges that may be even more harmful than the two highlighted
+above. Exchanges have certain obligations under the Reg-NMS regime that
+requires them to aggregate quotes from across market centers. To do this, the
+vast majority of venues take direct feeds from each of the other protected
+quote venues. They take direct feeds because direct feeds are fastest, but
+they also sometimes mix their use of direct feeds with SIP feeds as was
+highlighted when IEX challenged former Direct Edge CEO Bill O'Brien.
+
+Why would they take both?  By taking SIP feeds and using them for pricing
+exchange held pegged orders (midpoints, for example) an ever so slight
+advantage can be given to fast market participants when taking liquidity
+during level transitions. This issue, to be honest, has a very small practical
+impact on pegged orders. More pressing and harmful is the negative impact it
+has on the perception of our market place as being unfair and dishonest.
+
+How do we solve these problems? All three issues can be put to rest in one
+fell swoop: simply distribute the SIP.
+
+### A Distributed SIP
+
+[utp]: http://www.utpplan.com
+[cta]: http://cta.nyxdata.com/CTA 
+[tcp]: http://en.wikipedia.org/wiki/Transmission_Control_Protocol
+[multicast]: http://en.wikipedia.org/wiki/Multicast
