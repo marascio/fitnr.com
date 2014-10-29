@@ -1,0 +1,30 @@
+---
+title: On Timing the News
+date: 2014-10-29 02:18 UTC
+tags: market-structure
+published: false
+---
+
+**DRAFT**
+
+Time is a tricky beast and analyzing historical events based on time is
+frought with peril. One must be diligent and skeptical, especially when the
+methodology for data collection is unknown or farmed out to a third party.
+
+Most importantly the means by which a timestamp is calculated is critical.
+
+sources of error
+    timestamps calculated by the same entity?
+        if not, how were disparate clocks synchronized?
+
+    how were observations done? data push or data poll?
+        if polling, from how many points of observation?
+        in particular, if polling a website was caching handled properly?
+
+when did something actually happen?
+
+if you're making an observation, how do you prove to yourself observation is
+not subject to individual bias?
+
+SEC akamai
+data propogation
