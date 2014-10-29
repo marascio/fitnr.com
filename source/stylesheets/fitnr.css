@@ -6,12 +6,12 @@ body, html {
 
 @font-face {
     font-family: 'Mono Social Icons Font';
-    src: url('/MonoSocialIconsFont-1.10.eot');
-    src: url('/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
-         url('/MonoSocialIconsFont-1.10.woff') format('woff'),
-         url('/MonoSocialIconsFont-1.10.ttf') format('truetype'),
-         url('/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
-    src: url('/MonoSocialIconsFont-1.10.ttf') format('truetype');
+    src: url('/fonts/MonoSocialIconsFont-1.10.eot');
+    src: url('/fonts/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/MonoSocialIconsFont-1.10.woff') format('woff'),
+         url('/fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+         url('/fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+    src: url('/fonts/MonoSocialIconsFont-1.10.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -68,14 +68,14 @@ a:active {
     /*background: #4063AD;*/
     /*background: #5D729E;*/
     background: #A1B6E2;
-    height: 3px;
+    height: 5px;
 }
 
 #topbar div.b {
     /*background: #85A1DC;*/
     /*background: #A0AECB;*/
     background: #CFDCF5;
-    height: 3px;
+    height: 4px;
 }
 
 #topbar div.c {
@@ -123,7 +123,7 @@ a:active {
     padding-top: 76px;
     position: absolute;
     top: 5px;
-    left: 833px;
+    left: 828px;
 }
 
 #social span.symbol {
@@ -218,4 +218,9 @@ a:active {
 
 #sidebar h2 {
     text-transform: uppercase;
+}
+
+.headshot {
+    float: left;
+    margin-right: 10px;
 }

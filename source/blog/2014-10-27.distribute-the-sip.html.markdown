@@ -13,11 +13,22 @@ distributed nature of our marketplace and provides a distinct improvement upon
 the current scheme without impinging upon the exchange's ability to provide
 innovative direct data feed products.*
 
+Recently, the SIPs have come under increased scrutiny due to embarrasing
+failures, technology neglect, and a perceived unfairness in how SIP market
+data is distributed vs the pricier and speedier direct data feeds.
+
+Calls have been made to fix the SIP. Some want a competitive process while
+others seek to upgrade the existing infrastructure. Ultimately, the right way
+to "fix the SIP" is to change how we look at the SIP altogethre, and in turn,
+a compelling natural solution presents itself.
+
+### The Lay of the Land
+
 The US equities market place is comprised of numerous competitive displayed
 and non-displayed liquidity centers. Each liquidity center that receives
 quotation protection is known as an exchange and is required to provide, in
-real-time, their quotations and trade activity to a centralized processor
-known as a SIP.
+real-time, their top of book quotes and trade activity to a centralized
+processor known as a SIP.
 
 Before we go any further let's make sure we're on the same page:
 
@@ -58,6 +69,8 @@ Before we go any further let's make sure we're on the same page:
    each market center, a calculated national best bid and offer, and trade
    notifications. Market activity messages are what you see every day on your
    quote screens and are the most sensitive to real-time processing.
+
+### Problems
 
 The SIP is a centralized construct with both an input side and an output side.
 The input side is fed data via [TCP][tcp] and the output side distributed data
@@ -101,6 +114,28 @@ How do we solve these problems? All three issues can be put to rest in one
 fell swoop: simply distribute the SIP.
 
 ### A Distributed SIP
+
+The reality is: there is no true NBBO. Because information is always inflight
+between venues it is impossible to know with 100% certainty the true state of
+the market across all venues. Each venue can only do as good as physics will
+allow. Today that means taking direct feeds from each other protected quote
+venue and building a synthetic NBBO based on the data as it arrives. The
+alternative would be to rely on the SIP distributed NBBO which we already know
+is subject to intrinsic latency because of its flawed architecture.
+
+So, venues are already building their own "SIP", if you will. Why not use it?
+Fixing the SIP can be done by leveraging the fact that exchanges already have
+to construct a synthetic view of the market.
+
+1. Require each protected quote center to provide a market data feed which
+   contains that venue's SIP.
+
+2. Because the venue-sourced SIP data is now originating at the same point as
+   the direct feeds (it is now, in essence, a direct SIP feed), it should have
+   "net 0" latency delta over the course of a single day. Meaning: if you were
+   to measure the deltas between a SIP message and the corresponding depth of
+   book event over a period of a day, they should add up to 0. Some SIP
+   messages will be slightly faster at some times and vice-versa.
 
 [utp]: http://www.utpplan.com
 [cta]: http://cta.nyxdata.com/CTA 
