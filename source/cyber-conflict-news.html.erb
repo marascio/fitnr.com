@@ -1,0 +1,20 @@
+<h1>Cyber Conflict in the News</h1>
+
+<ul>
+
+<% data.cyberevents.each do |i| e = i[1] %>
+
+    <li>
+        <p><%= e.date %> - <%= e.headline %></p>
+        <p><%= e.summary %></p>
+
+        <ol> 
+            <% e.links.each do |l| %>
+                <li><%= link_to l.source, l.link %></li>
+            <% end %>
+        </ol>
+    </li>
+
+<% end %>
+
+<ul>

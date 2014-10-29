@@ -194,25 +194,34 @@ a:active {
 #main h1 {
     font-family: "Droid Sans", sans-serif;
     font-weight: 700;
+    text-align: left;
 }
 
 #main h2 {
     font-family: "Droid Sans", sans-serif;
     font-weight: 700;
+    text-align: left;
 }
 
 #main h3 {
     font-family: "Droid Sans", sans-serif;
     font-weight: 700;
+    text-align: left;
 }
 
 #main h4 {
     font-family: "Droid Sans", sans-serif;
     font-weight: 700;
+    text-align: left;
 }
 
-#footer {
+footer {
     clear: both;
+    font-weight: 400;
+    font-size: 12px;
+    color: #585143;
+    text-align: center;
+    padding-top: 50px;
 }
 
 #sidebar {
@@ -252,4 +261,30 @@ a:active {
 .headshot {
     float: left;
     margin-right: 10px;
+}
+
+#welcome {
+    clear: both;
+    padding: 15px;
+    border-bottom: 1px dotted #d3d3d3;
+    text-align: center;
+}
+
+#changelog {
+    float: right;
+    width: 450px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+    line-height: 170%;
+}
+
+#recentblog {
+    float: left;
+    width: 449px;
+    border-right: 1px dotted #d3d3d3;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+    line-height: 170%;
 }

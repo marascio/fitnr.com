@@ -1,33 +1,16 @@
 ---
-paginate: true
-pageable: true
-per_page: 1
+layout: home
 ---
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
 
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
+<div id="welcome">
+  welcome
+</div>
 
-<% page_articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %></h2>
-  <%= article.body %>
-  <time>Published: <%= article.date.strftime('%F') %></time>
-<% end %>
+<div id="recentblog">
+  recent blogs
+</div>
 
-<ol>
-<% blog.articles.each do |article| %>
-    <li>
-        <time><%= article.date.strftime('%b %d %Y') %></time>
-        <%= link_to article.title, article %>
-    </li>
-<% end %>
-</ol>
+<div id="changelog">
+  change log
+</div>
 
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
