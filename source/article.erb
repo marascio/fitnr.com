@@ -12,6 +12,8 @@
   </head>
   <body>
 
+    <%= partial "topbar" %>
+
     <div id="wrap">
     
         <div id="header">
@@ -20,14 +22,20 @@
         </div>
 
         <div id="main" role="main">
-<% page_articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %></h2>
-  <%= article.body %>
-  <time>Published: <%= article.date.strftime('%F') %></time>
-<% end %>
+
+
+  <h2><%= link_to current_article.title, current_article %></h2>
+  <article>
+  <%= current_article.body %>
+  </article>
+
+  <time>Published: <%= current_article.date.strftime('%F') %></time>
+
         </div>
     
         <div id="sidebar">
+            <%= partial "nav" %>
+
             <aside>
               <h2>Recent Articles</h2>
               <ol>

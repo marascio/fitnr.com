@@ -12,6 +12,7 @@ achieve latency pairity with direct venue feeds. This change embraces the
 distributed nature of our marketplace and provides a distinct improvement upon
 the current scheme without impinging upon the exchange's ability to provide
 innovative direct data feed products.*
+{:.highlight}
 
 Recently, the SIPs have come under increased scrutiny due to embarrasing
 failures, technology neglect, and a perceived unfairness in how SIP market

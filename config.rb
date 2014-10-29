@@ -71,8 +71,6 @@ page "/feed.xml", layout: false
 # Reload the browser automatically whenever files change
 activate :livereload
 
-activate :breadcrumbs
-
 activate :imageoptim
 
 # Methods defined in the helpers block are available in templates

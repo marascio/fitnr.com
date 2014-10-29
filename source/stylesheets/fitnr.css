@@ -151,17 +151,6 @@ a:active {
     color: #42598A
 }
 
-#sidebar {
-    font-family: "Droid Sans", sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    float: left;
-    width: 240px;
-    padding-left: 15px;
-    padding-right: 15px;
-    line-height: 100%;
-}
-
 #main {
     float: right;
     width: 649px;
@@ -171,6 +160,7 @@ a:active {
     line-height: 170%;
     border-left: 1px dotted #d3d3d3;
     text-align: justify;
+    min-height: 640px;
 }
 
 #main p em {
@@ -180,9 +170,25 @@ a:active {
     /*    background: #E9F0FF;*/
     /*background: #FFF3DD;*/
     /*color: #55458E;*/
-    background: #FFF6E6;
     /*color: #817255;*/
+}
+
+#main .highlight {
+    background: #FFF6E6;
     color: #585143;
+}
+
+#main p.aside {
+    margin-top: 0;
+    padding-top: 0;
+    line-height: 100%;
+}
+
+#main p.aside em {
+    background: none;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
 }
 
 #main h1 {
@@ -209,6 +215,17 @@ a:active {
     clear: both;
 }
 
+#sidebar {
+    font-family: "Droid Sans", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    float: left;
+    width: 240px;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 100%;
+}
+
 #sidebar aside ol {
     list-style-type: none;
     line-height: 200%;
@@ -218,6 +235,18 @@ a:active {
 
 #sidebar h2 {
     text-transform: uppercase;
+}
+
+#sidebar nav {
+    font-family: "Droid Sans", sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+#sidebar nav ol {
+    list-style-type: none;
+    border: 0;
+    padding: 0;
 }
 
 .headshot {

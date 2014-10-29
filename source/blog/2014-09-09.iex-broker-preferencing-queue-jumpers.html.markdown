@@ -6,10 +6,12 @@ tags: market-structure
 
 *This article [originally appeared online][1] at the [TABBForum][2] on
 September 9, 2014.*
+{:.aside}
 
 *IEX needs broker preferencing because of its business model – its non-broker
 owners provide no client flow, and many electronic market makers see little
 reason to be exposed to the high fee venue. But that doesn't make it right.*
+{:.highlight}
 
 You’ve arrived at the theater quite early. The reviews have been great, so you
 anticipated a long line to get in, and your good planning has you in prime

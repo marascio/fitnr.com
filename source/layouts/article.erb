@@ -5,9 +5,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
     <meta name="description" content="The personal site of Louis Marascio. Thoughts on programming, startups and finance." /> 
     <title>Louis Marascio &laquo; Fixed in the Next Release<%= ' - ' + current_article.title unless current_article.nil? %></title>
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'> 
-    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Racing+Sans+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'> 
+    <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'> 
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
     <%= stylesheet_link_tag 'fitnr' %>
   </head>
@@ -20,10 +19,15 @@
         <%= partial "header" %>
 
         <div id="main" role="main">
-          <%= yield %>
+
+          <h2><%= link_to current_article.title, current_article %></h2>
+          <%= current_article.body %>
+          <time>Published: <%= current_article.date.strftime('%F') %></time>
+
         </div>
     
         <div id="sidebar">
+
             <%= partial "nav" %>
 
             <aside>
@@ -51,7 +55,7 @@
         </div>
 
         <%= partial "footer" %>
-
+        
     </div>
   </body>
 </html>

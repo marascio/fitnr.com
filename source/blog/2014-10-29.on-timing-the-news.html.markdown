@@ -28,3 +28,5 @@ not subject to individual bias?
 
 SEC akamai
 data propogation
+
+market data timestamps
