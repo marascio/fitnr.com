@@ -75,8 +75,6 @@ GEM
       addressable (~> 2.3.5)
       middleman-core (~> 3.2)
       tzinfo (>= 0.3.0)
-    middleman-breadcrumbs (0.0.3)
-      middleman (>= 3.3.5)
     middleman-core (3.3.6)
       activesupport (~> 4.1.0)
       bundler (~> 1.1)
@@ -157,7 +155,6 @@ DEPENDENCIES
   image_optim
   middleman (~> 3.3.6)
   middleman-blog (~> 3.5.3)
-  middleman-breadcrumbs
   middleman-google-analytics
   middleman-imageoptim (~> 0.1.4)
   middleman-livereload (~> 3.1.0)
