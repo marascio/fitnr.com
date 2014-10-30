@@ -279,6 +279,18 @@ footer {
     line-height: 170%;
 }
 
+#changelog ol {
+    list-style-type: none;
+    line-height: 200%;
+    border: 0;
+    padding: 0;
+}
+
+#changelog div {
+    margin: 0;
+    padding: 0;
+}
+
 #recentblog {
     float: left;
     width: 449px;
@@ -287,4 +299,60 @@ footer {
     padding-right: 15px;
     font-size: 16px;
     line-height: 170%;
+}
+
+#recentblog ol {
+    list-style-type: none;
+    line-height: 200%;
+    border: 0;
+    padding: 0;
+}
+
+.left {
+    float: left;
+    width: 23%;
+}
+
+.right {
+    float: right;
+    width: 77%;
+}
+
+div.homesummary h1 {
+    font-family: "Droid Sans", sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-size: 22px;
+    text-align: center;
+}
+
+#welcome ol {
+    list-style-type: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+#welcome h1 {
+    display: inline;
+    font-family: "Droid Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#welcome li {
+    display: inline;
+    padding: 0;
+    padding-left: 20px;
+    margin: 0;
+}
+
+#welcome nav {
+    padding: 0;
+    margin: 0;
 }

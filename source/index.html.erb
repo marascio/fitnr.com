@@ -3,14 +3,36 @@ layout: home
 ---
 
 <div id="welcome">
-  welcome
+  <%= partial "nav" %>
+  Welcome to Fixed in the Next Release, the personal website of
+  <%= link_to "Louis R. Marascio", "about.html" %>.
 </div>
 
-<div id="recentblog">
-  recent blogs
+<div id="recentblog" class="homesummary">
+    <h1>Recent Blog Entries</h1>
+    <ol>
+    <% blog.articles[0..5].each do |article| %>
+        <li>
+            <div class="left">
+            <time><%= article.date.strftime('%b %d %Y') %></time>
+            </div>
+            <div class="right">
+            <%= link_to article.title, article %>
+            </div>
+        </li>
+    <% end %>
+    </ol>
 </div>
 
-<div id="changelog">
-  change log
+<div id="changelog" class="homesummary">
+    <h1>Site Changelog</h1>
+    <ol>
+        <% data.changelog.each do |i| e = i[1] %>
+        <li>
+            <div class="left"><time><%= e.date %></time></div>
+            <div class="right"><%= e.description %></div>
+        </li>
+        <% end %>
+    </ol>
 </div>
 
