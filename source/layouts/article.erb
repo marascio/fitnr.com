@@ -20,9 +20,19 @@
 
         <div id="main" role="main">
 
-          <h2><%= link_to current_article.title, current_article %></h2>
-          <%= current_article.body %>
-          <time>Published: <%= current_article.date.strftime('%F') %></time>
+          <article>
+            <header>
+              <h2><%= link_to current_article.title, current_article %></h2>
+
+              <time datetime=<%= "current_article.date.strftime('%F')" %>>
+                  Published: <%= current_article.date.strftime('%F') %>
+              </time>
+
+            </header>
+
+            <%= current_article.body %>
+
+          </article>
 
         </div>
     
