@@ -124,6 +124,8 @@ a:active {
     position: absolute;
     top: 5px;
     left: 828px;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 #social span.symbol {
