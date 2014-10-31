@@ -1,0 +1,11 @@
+- site: google
+  key:  google6c4d69758a873e9b.html
+  page: google6c4d69758a873e9b.html
+
+- site: bing
+  key:  6A470E1EB0542192603773D76E11FEEC
+  page: BingSiteAuth.xml
+
+- site: yahoo
+  key:  2c19595f7d98e6f6
+  page: y_key_160112d00326f45e.html

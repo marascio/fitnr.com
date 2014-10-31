@@ -1,0 +1,15 @@
+<%# be mindle of whitespace here, the first line rendered can matter %>
+<% s = locals[:siteauth] %>
+<% if s[:site] == "yahoo" %>
+<%= s[:key] %>
+<% elsif s[:site] == "google" %>
+google-site-verification: <%= s[:key] %>
+<%- elsif s[:site] == "bing" -%>
+<?xml version="1.0"?>
+<users>
+    <user><%= s[:key] %></user>
+</users>
+<% else %>
+error: unknown siteauth site type
+<% end %>
+

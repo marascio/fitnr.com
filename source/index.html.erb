@@ -5,34 +5,39 @@ layout: home
 <div id="welcome">
   <%= partial "nav" %>
   Welcome to Fixed in the Next Release, the personal website of
-  <%= link_to "Louis R. Marascio", "about.html" %>.
+  <%= link_to data.me.name, "about.html" %>.
 </div>
 
 <div id="recentblog" class="homesummary">
-    <h1>Recent Blog Entries</h1>
-    <ol>
-    <% blog.articles[0..5].each do |article| %>
-        <li>
-            <div class="left">
-            <time><%= article.date.strftime('%b %d %Y') %></time>
-            </div>
-            <div class="right">
-            <%= link_to article.title, article %>
-            </div>
-        </li>
-    <% end %>
-    </ol>
+    <h1>Most Recent Blog Posts</h1>
+	<table>
+		<% blog.articles[0..5].each do |article| %>
+        <tr>
+            <td class="left">
+				<time><%= article.date.strftime('%b %d %Y') %></time>
+            </td>
+            <td class="right">
+				<%= link_to article.title, article %>
+            </td>
+		</tr>
+		<% end %>
+    </table>
 </div>
 
 <div id="changelog" class="homesummary">
     <h1>Site Changelog</h1>
-    <ol>
-        <% data.changelog.each do |i| e = i[1] %>
-        <li>
-            <div class="left"><time><%= e.date %></time></div>
-            <div class="right"><%= e.description %></div>
-        </li>
-        <% end %>
+	<table>
+		<% data.changelog.to_a[0..5].each do |k, e| %>
+        <tr>
+			<td class="left">
+				<time><%= e.date.strftime('%b %d %Y') %></time>
+			</td>
+			<td class="right">
+				<%= link_to e.description, 'changelog/' + k + '.html' %>
+			</td>
+        </tr>
+		<% end %>
+	</table>
     </ol>
 </div>
 

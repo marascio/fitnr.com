@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /fonts
+Sitemap: http://fitnr.com/sitemap.xml.gz

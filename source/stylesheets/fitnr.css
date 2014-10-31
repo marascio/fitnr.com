@@ -92,7 +92,6 @@ a:active {
     margin: 5px;
 }
 
-
 #header {
     padding: 15px;
     padding-top: 20px;
@@ -119,18 +118,17 @@ a:active {
 }
 
 #social {
-    padding: 15px;
-    padding-top: 76px;
-    position: absolute;
-    top: 5px;
-    left: 828px;
-    overflow: auto;
-    white-space: nowrap;
+	position: absolute;
+	top: 91px;
+	left: 864px;
+	margin: 0;
+	padding: 0;
 }
 
 #social span.symbol {
-    font-size: 36px;
-    margin-left: 3px;
+    font-size: 32px;
+	margin: 0;
+	padding: 0;
 }
 
 #social a:link {
@@ -275,60 +273,74 @@ footer {
 #changelog {
     float: right;
     width: 450px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 16px;
-    line-height: 170%;
-}
-
-#changelog ol {
-    list-style-type: none;
-    line-height: 200%;
-    border: 0;
-    padding: 0;
-}
-
-#changelog div {
-    margin: 0;
-    padding: 0;
 }
 
 #recentblog {
     float: left;
     width: 449px;
     border-right: 1px dotted #d3d3d3;
+}
+
+div.homesummary {
+    margin: 0;
+    padding: 0;
     padding-left: 15px;
     padding-right: 15px;
     font-size: 16px;
     line-height: 170%;
 }
 
-#recentblog ol {
-    list-style-type: none;
-    line-height: 200%;
-    border: 0;
+.homesummary table {
+	width: 100%;
+}
+
+.homesummary td {
     padding: 0;
+	margin: 0;
 }
 
-.left {
+.homesummary .left {
     float: left;
-    width: 23%;
+    width: 22%;
 }
 
-.right {
+.homesummary .right {
     float: right;
-    width: 77%;
+    width: 78%;
 }
 
 div.homesummary h1 {
     font-family: "Droid Sans", sans-serif;
     text-transform: uppercase;
-    padding-bottom: 10px;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
 }
 
-#welcome ol {
+.homesummary time {
+    font-family: "Droid Sans Mono", monospace;
+    text-transform: uppercase;
+	font-size: .75em;
+	font-weight: bold;
+	color: grey;
+}
+
+#welcome nav {
+    padding: 0;
+    margin: 0;
+}
+
+#welcome nav h1 {
+    display: inline;
+    font-family: "Droid Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    text-align: center;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#welcome nav ol {
     list-style-type: none;
     border: 0;
     padding: 0;
@@ -336,25 +348,9 @@ div.homesummary h1 {
     margin-bottom: 20px;
 }
 
-#welcome h1 {
-    display: inline;
-    font-family: "Droid Sans", sans-serif;
-    text-transform: uppercase;
-    font-size: 18px;
-    text-align: center;
-    line-height: 0;
-    padding: 0;
-    margin: 0;
-}
-
-#welcome li {
+#welcome nav li {
     display: inline;
     padding: 0;
     padding-left: 20px;
-    margin: 0;
-}
-
-#welcome nav {
-    padding: 0;
     margin: 0;
 }

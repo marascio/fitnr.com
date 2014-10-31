@@ -20,8 +20,8 @@ activate :blog do |blog|
   # blog.day_link = "{year}/{month}/{day}.html"
   # blog.default_extension = ".markdown"
 
-  blog.tag_template = "tag.html"
-  blog.calendar_template = "calendar.html"
+  blog.tag_template = "blog/tag.html"
+  blog.calendar_template = "blog/calendar.html"
 
   # Enable pagination
   # blog.paginate = true
@@ -61,6 +61,16 @@ page "/feed.xml", layout: false
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
+data.siteauth.each do |s|
+    proxy "/#{s[:page]}", "siteauth.html", :layout => false,
+          :locals => { :siteauth => s }, :ignore => true
+end
+
+data.changelog.each do |c|
+    proxy "/changelog/#{c[0]}.html", "changelog/entry.html",
+          :locals => { :entry => c }, :ignore => true
+end
+
 ###
 # Helpers
 ###
@@ -72,6 +82,10 @@ page "/feed.xml", layout: false
 activate :livereload
 
 activate :imageoptim
+
+set :url_root, 'http://fitnr.com'
+
+activate :search_engine_sitemap
 
 # Methods defined in the helpers block are available in templates
 # helpers do
