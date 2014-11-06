@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic,300,300italic&subset=latin,latin-ext);
+
 body, html {
     background: #fff;
     margin: 0;
@@ -87,7 +89,8 @@ a:active {
 
 #wrap {
     width: 960px;
-    font-family: "Droid Serif", serif;
+    /*font-family: "Droid Serif", serif;*/
+    font-family: "Merriweather", serif;
     font-weight: 400;
     margin: 5px;
 }
@@ -159,14 +162,14 @@ a:active {
     font-size: 16px;
     line-height: 170%;
     border-left: 1px dotted #d3d3d3;
-    text-align: justify;
+    /*text-align: justify;*/
     min-height: 640px;
 }
 
 #main p em {
-    font-family: "Droid Sans", sans-serif;
+    /*font-family: "Droid Sans", sans-serif;*/
     font-style: italic;
-    font-weight: 700;
+    font-weight: 300;
     /*    background: #E9F0FF;*/
     /*background: #FFF3DD;*/
     /*color: #55458E;*/
@@ -174,8 +177,9 @@ a:active {
 }
 
 #main .highlight {
-    background: #FFF6E6;
-    color: #585143;
+    /*background: #FFF6E6;*/
+    /*color: #585143;*/
+    color: #817255;
 }
 
 #main p.aside {
